@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221208 12:03:38.631" rpa="false" schemaversion="3">
+<suite id="s1" name="DDLogin" source="c:\Users\DELL\Documents\tu\TestCase\InternShip_Tester_TCNopCommerce\TC_NopCommerce\AutomationTest\TestCase\DDLogin.robot">
+<test id="s1-t1" name="LoginTestwithExcel" line="12">
+<kw name="Open my Browser" library="keywordExcel" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Website_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221208 12:03:40.377" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20221208 12:03:40.376" endtime="20221208 12:03:46.266"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221208 12:03:46.268" endtime="20221208 12:03:46.569"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>1.5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20221208 12:03:46.570" endtime="20221208 12:03:46.581"/>
+</kw>
+<status status="PASS" starttime="20221208 12:03:40.375" endtime="20221208 12:03:46.583"/>
+</kw>
+<kw name="Invalid Login Scenarious">
+<arg>${enterGmail}</arg>
+<arg>${enterPassword}</arg>
+<arg>${erro_msg}</arg>
+<msg timestamp="20221208 12:03:46.594" level="FAIL">Variable '${enterGmail}' not found.</msg>
+<status status="FAIL" starttime="20221208 12:03:46.587" endtime="20221208 12:03:46.599"/>
+</kw>
+<kw name="Finish TestCase" library="keywordExcel" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221208 12:03:46.606" endtime="20221208 12:03:49.917"/>
+</kw>
+<status status="PASS" starttime="20221208 12:03:46.604" endtime="20221208 12:03:49.918"/>
+</kw>
+<doc>Testing all cases login fail
+Not filling, incorrect email, incorrect password, incorrect email and password, error gmail.</doc>
+<tag>two required fields</tag>
+<status status="FAIL" starttime="20221208 12:03:40.365" endtime="20221208 12:03:49.920">Variable '${enterGmail}' not found.</status>
+</test>
+<status status="FAIL" starttime="20221208 12:03:38.677" endtime="20221208 12:03:49.925"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">two required fields</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="DDLogin">DDLogin</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221208 12:03:40.356" level="ERROR">[ DataDriver ] Error in robot file:
+  File "c:\Users\DELL\Documents\tu\TestCase\InternShip_Tester_TCNopCommerce\TC_NopCommerce\AutomationTest\TestCase\DDLogin.robot", line 0</msg>
+<msg timestamp="20221208 12:03:40.359" level="ERROR">In source file:
+  File "./Data/testDataLogin2xlsx", line 0</msg>
+<msg timestamp="20221208 12:03:40.362" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was empty. Tried to find c:\Users\DELL\Documents\tu\TestCase\InternShip_Tester_TCNopCommerce\TC_NopCommerce\AutomationTest\TestCase\DDLogin./Data/testDataLogin2xlsx but file does not exist. If no file validation is required, set file_search_strategy=None.</msg>
+</errors>
+</robot>
